@@ -1,0 +1,241 @@
+/* ----- Estilos Gerais do Corpo da Página ----- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    /* Espaço no topo para compensar o menu fixo */
+    padding-top: 80px; 
+}
+
+/* ----- Cabeçalho e Navegação Principal ----- */
+header {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+    
+    /* Posicionamento fixo no topo */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* Efeito suave na mudança de cor */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Efeito visual ao passar o mouse sobre os links do menu */
+nav ul li a:hover {
+    background-color: #007BFF;
+    color: #ffffff;
+}
+
+/* Destaca o link da página que está ativa */
+nav ul li a.active {
+    color: #007BFF;
+    font-weight: 700;
+}
+
+
+/* ----- Container do Conteúdo Principal ----- */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Estilo padrão para títulos e parágrafos */
+h1, h2 {
+    color: #0056b3;
+    border-bottom: 2px solid #f0f2f5;
+    padding-bottom: 10px;
+}
+
+p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* ----- Classes Utilitárias ----- */
+
+/* Estilo para a foto de perfil */
+.profile-pic {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    border: 3px solid #007BFF;
+}
+
+/* ----- Estilos para Imagens no Conteúdo ----- */
+
+.image-left {
+    float: left;
+    width: 200px;
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 10px;
+    margin-right: 20px; 
+    margin-bottom: 10px; 
+}
+
+.image-right {
+    float: right;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-left: 20px; 
+    margin-bottom: 10px;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ----- Página Formação ----- */
+
+.info-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-list li {
+    background-color: #f8f9fa;
+    border-left: 4px solid #007BFF;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.info-list li strong {
+    font-size: 1.1em;
+    color: #0056b3;
+}
+
+/* ----- Página Portfólio ----- */
+
+.portfolio-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 20px; /* Cria um espaço entre os itens */
+}
+
+.gallery-item {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    width: 31%; /* Ajustado para 3 itens com gap */
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden; /* Garante que a imagem não saia das bordas arredondadas */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px; /* Altura fixa para todos */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    display: block;
+}
+
+
+.item-description {
+    padding: 15px;
+    background-color: #f8f9fa;
+}
+
+.item-description h3 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #333;
+}
+/* ----- Página Contato ----- */
+
+.contact-info {
+    text-align: center;
+    margin: 20px 0 40px 0;
+    font-size: 1.2em;
+}
+
+.contact-info a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+form label {
+    display: block; /* Força a label a ocupar uma linha */
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+form button {
+    display: block; /* Força o botão a ocupar uma linha */
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
